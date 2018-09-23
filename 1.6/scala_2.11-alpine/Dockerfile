@@ -28,8 +28,8 @@ ENV FLINK_VERSION=1.6.0 \
 # Prepare environment
 ENV FLINK_HOME=/opt/flink
 ENV PATH=$FLINK_HOME/bin:$PATH
-RUN addgroup -S -g 9999 flink && \
-    adduser -D -S -H -u 9999 -G flink -h $FLINK_HOME flink
+# RUN addgroup -S -g 9999 flink && \
+    # adduser -D -S -H -u 9999 -G flink -h $FLINK_HOME flink
 WORKDIR $FLINK_HOME
 
 ENV FLINK_URL_FILE_PATH=flink/flink-${FLINK_VERSION}/flink-${FLINK_VERSION}-bin-${HADOOP_SCALA_VARIANT}.tgz
